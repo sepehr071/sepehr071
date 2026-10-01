@@ -24,6 +24,12 @@
   <img src="https://img.shields.io/badge/Asterisk-F68F1E?style=flat-square&logo=asterisk&logoColor=white" alt="Asterisk">
 </p>
 
+<!-- TERMINAL:START -->
+<p align="center">
+  <img src="docs/terminal.gif" width="900" alt="Animated retro terminal demo session: a Persian voice agent answers a question using a search_knowledge tool, a PM assistant pauses a jira.create_issue tool call for approval, an eval run passes 12/12 demo scenarios, then a neofetch-style card for Sepehr Radmard, AI Engineer." />
+</p>
+<!-- TERMINAL:END -->
+
 ---
 
 ## What I build
@@ -115,6 +121,32 @@ A self-hosted, multi-model AI workspace with a DLP gate, sandboxed code executio
 
 ---
 
+## ♟️ Play chess against my AI coach
+
+Click a move and open the issue: Stockfish answers as Black, and an LLM coach comments in English and Persian, a taste of my [voice-chess-coach](https://github.com/sepehr071/voice-chess-coach).
+
+<!-- CHESS:START -->
+<h3 align="center">Chess vs. the AI Coach</h3>
+
+<p align="center">Game #1 &middot; you play <b>White</b>: click a move below, Stockfish answers as Black and an LLM coach comments.</p>
+
+<p align="center"><img src="chess/board-0.svg" width="360" alt="Chess board, move 1"></p>
+
+<p align="center"><b>White to move</b></p>
+
+<details open><summary><b>Your move</b> (legal moves for White)</summary>
+
+| Piece | Moves |
+| :-- | :-- |
+| Knight | [Na3](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+b1a3&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [Nc3](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+b1c3&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [Nf3](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+g1f3&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [Nh3](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+g1h3&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) |
+| Pawn | [a3](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+a2a3&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [a4](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+a2a4&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [b3](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+b2b3&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [b4](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+b2b4&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [c3](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+c2c3&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [c4](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+c2c4&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [d3](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+d2d3&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [d4](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+d2d4&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [e3](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+e2e3&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [e4](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+e2e4&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [f3](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+f2f3&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [f4](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+f2f4&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [g3](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+g2g3&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [g4](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+g2g4&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [h3](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+h2h3&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) &middot; [h4](https://github.com/sepehr071/sepehr071/issues/new?title=chess%3A+move+h2h4&body=Just+press+Submit+%E2%80%94+the+bot+plays+Black+within+a+minute.) |
+
+</details>
+
+<!-- CHESS:END -->
+
+---
+
 ## More projects
 
 <table>
@@ -197,6 +229,17 @@ Fly a 6DOF probe through a real-scale solar system in the browser, every planet 
 </details>
 
 <p align="center"><sub>All screenshots use demo or synthetic data. Open any repo for architecture notes, setup and more screenshots.</sub></p>
+
+### 🕹️ Commit arcade
+
+<!-- ARCADE:START -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sepehr071/sepehr071/output/breakout-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sepehr071/sepehr071/output/breakout-contribution-graph.svg">
+  <img alt="Breakout game animated over Sepehr's GitHub contribution graph: a ball bounces around breaking contribution-day bricks" src="https://raw.githubusercontent.com/sepehr071/sepehr071/output/breakout-contribution-graph.svg">
+</picture>
+<p><sub>My last year of commits as Breakout bricks, regenerated daily. <a href="https://abozanona.github.io/pacman-contribution-graph/">Play it yourself</a> · made with <a href="https://github.com/abozanona/pacman-contribution-graph">pacman-contribution-graph</a></sub></p>
+<!-- ARCADE:END -->
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:06B6D4,100:4F46E5&height=90&section=footer" alt="" width="100%">
