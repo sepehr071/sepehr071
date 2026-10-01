@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F46E5,100:06B6D4&height=170&section=header&text=Sepehr%20Radmard&fontColor=ffffff&fontSize=46&fontAlignY=36&desc=AI%20Engineer%20%C2%B7%20RAG%20%26%20Retrieval%20%C2%B7%20AI%20Agents%20%C2%B7%20Evals&descAlignY=58&descSize=16" alt="Sepehr Radmard, AI Engineer: RAG and retrieval, AI agents, evals" width="100%">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F46E5,100:06B6D4&height=170&section=header&text=Sepehr%20Radmard&fontColor=ffffff&fontSize=46&fontAlignY=36&desc=AI%20Engineer%20%C2%B7%20RAG%20%2B%20Retrieval%20%C2%B7%20AI%20Agents%20%C2%B7%20Evals&descAlignY=58&descSize=16" alt="Sepehr Radmard, AI Engineer: RAG and retrieval, AI agents, evals" width="100%">
 </p>
 
 <p align="center">
