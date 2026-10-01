@@ -13,7 +13,7 @@ def fake_engine(board, move):
 
 
 def fake_coach(white_san, black_san, before, after):
-    return f"Played {white_san}", "حرکت خوب"
+    return f"Played {white_san}"
 
 
 def run(title, user="alice", state=None, stats=None):
@@ -113,9 +113,7 @@ def test_clean_and_coach_fallback():
     assert play.clean("<b>Nice</b> [link](https://x.y) **move**\x07") == "Nice link move"
     assert play.clean("hi @octocat see www.evil.com now") == "hi octocat see now"
     assert len(play.clean("a" * 300)) == 140
-    assert play.clean("مهره\u200cها") == "مهره\u200cها"
-    en, fa = play.coach("e4", "e5", 0, 20, token="")  # no token -> template
-    assert en and fa
+    assert play.coach("e4", "e5", 0, 20, token="") == play.template_coach(0, 20)  # no token -> template
 
 
 def test_coach_uses_llm_json_and_rejects_bad(monkeypatch):
@@ -126,9 +124,9 @@ def test_coach_uses_llm_json_and_rejects_bad(monkeypatch):
             def __enter__(self): return self
             def __exit__(self, *a): pass
         return lambda req, timeout: R(body)
-    monkeypatch.setattr(play.urllib.request, "urlopen", fake_urlopen('{"en": "Good <i>e4</i>!", "fa": "خوب"}'))
-    assert play.coach("e4", "e5", 0, 20, token="t") == ("Good e4!", "خوب")
-    monkeypatch.setattr(play.urllib.request, "urlopen", fake_urlopen('{"en": "shit move", "fa": "x"}'))
+    monkeypatch.setattr(play.urllib.request, "urlopen", fake_urlopen('{"en": "Good <i>e4</i>!"}'))
+    assert play.coach("e4", "e5", 0, 20, token="t") == "Good e4!"
+    monkeypatch.setattr(play.urllib.request, "urlopen", fake_urlopen('{"en": "shit move"}'))
     assert play.coach("e4", "e5", 0, 20, token="t") == play.template_coach(0, 20)
     monkeypatch.setattr(play.urllib.request, "urlopen", fake_urlopen("not json"))
     assert play.coach("e4", "e5", 0, 20, token="t") == play.template_coach(0, 20)
@@ -141,7 +139,7 @@ def test_render_and_update_readme(tmp_path, monkeypatch):
     play.handle("chess: move g1f3", "bob", state, stats, fake_engine, fake_coach)
     block = play.render_block(state, stats)
     assert block.startswith(play.START) and block.endswith(play.END)
-    assert "board-6.svg" in block and 'dir="rtl"' in block
+    assert "board-6.svg" in block and 'dir="rtl"' not in block and "Coach:</i> Played Nf3" in block
     assert "issues/new?title=chess%3A+move+b1c3&body=Just+press+Submit" in block
     assert block.index("@bob](") < block.index("@alice](https://github.com/alice) | 1")  # top players sorted
     readme = tmp_path / "README.md"

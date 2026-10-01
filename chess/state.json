@@ -25,7 +25,6 @@
   "white": "a3",
   "black": "Nc6",
   "en": "Solid play - keep developing pieces and fight for the center.",
-  "fa": "بازی محکمی است؛ مهره‌ها را توسعه بده و برای مرکز بجنگ.",
   "eval": 9,
   "engine": "Stockfish"
  }

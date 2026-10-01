@@ -1,5 +1,5 @@
 """Community chess for the profile README: visitors play White, Stockfish plays Black,
-an LLM coach comments in English + Persian.
+an LLM coach comments in English.
 
 Idea inspired by marcizhu/readme-chess (MIT); this is independent code.
 
@@ -134,7 +134,7 @@ def clean(text, limit=140):
     s = re.sub(r"<[^>]*>", "", str(text))
     s = re.sub(r"(?:https?://|www\.)\S+", " ", s)
     s = re.sub(r"[`*_#\[\]()<>|\\~{}@]", "", s)  # @ too: no mention pings from the LLM
-    s = "".join(c for c in s if c.isprintable() or c == "\u200c")
+    s = "".join(c for c in s if c.isprintable())
     s = " ".join(s.split())
     return s if len(s) <= limit else s[:limit - 1].rstrip() + "…"
 
@@ -147,18 +147,18 @@ def pawns(cp):
 
 def template_coach(before, after):
     if after >= 9000:
-        return "Checkmate is in sight for White - finish it!", "مات سفید نزدیک است؛ کار را تمام کن!"
+        return "Checkmate is in sight for White - finish it!"
     if after <= -9000:
-        return "Black has a mating attack - defend the king!", "سیاه حملهٔ مات دارد؛ از شاه دفاع کن!"
+        return "Black has a mating attack - defend the king!"
     if after - before <= -150:
-        return "That one cost White material - check what Black is attacking.", "این حرکت برای سفید گران تمام شد؛ ببین سیاه به چه حمله می\u200cکند."
+        return "That one cost White material - check what Black is attacking."
     if after - before >= 100:
-        return "Nice move - White just improved the position.", "حرکت خوبی بود؛ سفید وضعیت را بهتر کرد."
-    return "Solid play - keep developing pieces and fight for the center.", "بازی محکمی است؛ مهره\u200cها را توسعه بده و برای مرکز بجنگ."
+        return "Nice move - White just improved the position."
+    return "Solid play - keep developing pieces and fight for the center."
 
 
 def coach(white_san, black_san, before, after, token=None, timeout=20):
-    """One-line coach comment {en, fa} from GitHub Models; templated fallback on any failure."""
+    """One-line English coach comment {en} from GitHub Models; templated fallback on any failure."""
     token = token if token is not None else os.environ.get("GITHUB_TOKEN")
     if token:
         prompt = (f"White played {white_san}. Black replied {black_san or 'nothing (the game ended)'}. "
@@ -167,8 +167,8 @@ def coach(white_san, black_san, before, after, token=None, timeout=20):
                 "response_format": {"type": "json_object"},
                 "messages": [
                     {"role": "system", "content": "You are a friendly chess coach. Reply ONLY with JSON "
-                     '{"en": "...", "fa": "..."}: one short sentence each (max 120 characters) about '
-                     "White's move and Black's reply. en in English, fa in Persian. Chess only, "
+                     '{"en": "..."}: one short English sentence (max 120 characters) about '
+                     "White's move and Black's reply. Chess only, "
                      "no profanity, no markdown, no links, no emoji."},
                     {"role": "user", "content": prompt}]}
         req = urllib.request.Request(MODEL_URL, json.dumps(body).encode(), {
@@ -177,9 +177,9 @@ def coach(white_san, black_san, before, after, token=None, timeout=20):
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 content = json.load(r)["choices"][0]["message"]["content"]
             data = json.loads(content.strip().strip("`").removeprefix("json"))
-            en, fa = clean(data["en"]), clean(data["fa"])
-            if en and fa and not any(w in (en + fa).lower() for w in BAD_WORDS):
-                return en, fa
+            en = clean(data["en"])
+            if en and not any(w in en.lower() for w in BAD_WORDS):
+                return en
         except Exception as e:
             print(f"coach fallback: {e}", file=sys.stderr)
     return template_coach(before, after)
@@ -223,18 +223,18 @@ def handle(title, user, state, stats, engine_fn=engine_turn, coach_fn=coach):
     if reply:
         black_san = board.san(reply)
         board.push(reply)
-    en, fa = coach_fn(white_san, black_san, before, after)
+    en = coach_fn(white_san, black_san, before, after)
 
     state["moves"] += [move.uci()] + ([reply.uci()] if reply else [])
     number = (len(state["moves"]) + 1) // 2
     state["history"] = (state["history"] + [{"n": number, "player": user, "white": white_san, "black": black_san}])[-5:]
-    state["last"] = {"player": user, "white": white_san, "black": black_san, "en": en, "fa": fa,
+    state["last"] = {"player": user, "white": white_san, "black": black_san, "en": en,
                      "eval": after, "engine": engine_name}
     stats[user] = stats.get(user, 0) + 1
 
     lines = [f"Thanks @{user}! You played **{white_san}**"
              + (f", {engine_name} answered **{black_san}**" if black_san else "")
-             + f" (eval {pawns(after)}).", "", f"> **Coach:** {en}", ">", f"> {fa}", "",
+             + f" (eval {pawns(after)}).", "", f"> **Coach:** {en}", "",
              f"[See the new board](https://github.com/{REPO}/blob/main/chess/board-{len(board.move_stack)}.svg)"
              f" - or the [README](https://github.com/{REPO}) to play the next move."]
     if board.is_game_over(claim_draw=True):
@@ -280,8 +280,7 @@ def render_block(state, stats):
                       + f' by <a href="https://github.com/{last["player"]}">@{last["player"]}</a>' if last else "")
                    + "</p>")
     if last:
-        out += ["", f'<p align="center"><i>Coach:</i> {html(last["en"])}</p>',
-                f'<p align="center" dir="rtl">{html(last["fa"])}</p>']
+        out += ["", f'<p align="center"><i>Coach:</i> {html(last["en"])}</p>']
         if "Stockfish" not in last.get("engine", "Stockfish"):
             out.append(f'<p align="center"><sub>Black played with the {last["engine"]}.</sub></p>')
     out.append("")
