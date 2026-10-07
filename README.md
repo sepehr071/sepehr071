@@ -124,26 +124,43 @@ Drop in a Persian meeting recording; get back who said what, the decisions, the 
 
 Plug Iran's everyday apps into Claude, Cursor, VS Code or any MCP client. Each one is a small Python stdio server on PyPI: `uvx <name>` and go.
 
-| Server | What your agent can do | |
-|---|---|---|
-| **Shopping** | | |
-| [snapp-mcp](https://github.com/sepehr071/snapp-mcp) | Search Snappfood and SnappMarket food and groceries, compare prices, find deals | ![stars](https://img.shields.io/github/stars/sepehr071/snapp-mcp?style=flat-square&label=%E2%98%85) |
-| [digikala-mcp](https://github.com/sepehr071/digikala-mcp) | Search Digikala with feature filters, best picks for a budget, sellers, price history, reviews | ![stars](https://img.shields.io/github/stars/sepehr071/digikala-mcp?style=flat-square&label=%E2%98%85) |
-| [technolife-mcp](https://github.com/sepehr071/technolife-mcp) | Electronics on Technolife: compare sellers and installment prices | ![stars](https://img.shields.io/github/stars/sepehr071/technolife-mcp?style=flat-square&label=%E2%98%85) |
-| [masterkala-mcp](https://github.com/sepehr071/masterkala-mcp) | Gadgets and accessories on MasterKala: prices, specs, deals | ![stars](https://img.shields.io/github/stars/sepehr071/masterkala-mcp?style=flat-square&label=%E2%98%85) |
-| [shopino-mcp](https://github.com/sepehr071/shopino-mcp) | Fashion from thousands of Iranian shops: prices, sizes, stock, shop ratings | ![stars](https://img.shields.io/github/stars/sepehr071/shopino-mcp?style=flat-square&label=%E2%98%85) |
-| [khanoumi-mcp](https://github.com/sepehr071/khanoumi-mcp) | Cosmetics, skin care and perfume on Khanoumi: prices, shades, reviews | ![stars](https://img.shields.io/github/stars/sepehr071/khanoumi-mcp?style=flat-square&label=%E2%98%85) |
-| [asalbanoo-mcp](https://github.com/sepehr071/asalbanoo-mcp) | Cosmetics, skin and hair care on Asal Banoo: prices, variants, deals | ![stars](https://img.shields.io/github/stars/sepehr071/asalbanoo-mcp?style=flat-square&label=%E2%98%85) |
-| **Travel** | | |
-| [mrbilit-mcp](https://github.com/sepehr071/mrbilit-mcp) | Cheapest flights, trains, buses and hotels in Iran, with seats and refund rules | ![stars](https://img.shields.io/github/stars/sepehr071/mrbilit-mcp?style=flat-square&label=%E2%98%85) |
-| [jabama-mcp](https://github.com/sepehr071/jabama-mcp) | Villas and stays with exact prices, group tours, events and theater tickets | ![stars](https://img.shields.io/github/stars/sepehr071/jabama-mcp?style=flat-square&label=%E2%98%85) |
-| [otaghak-mcp](https://github.com/sepehr071/otaghak-mcp) | Villas and cottages on Otaghak: availability, exact prices, reviews | ![stars](https://img.shields.io/github/stars/sepehr071/otaghak-mcp?style=flat-square&label=%E2%98%85) |
-| **Health** | | |
-| [doctoreto-mcp](https://github.com/sepehr071/doctoreto-mcp) | Find doctors on Doctoreto: visit fees, free slots, reviews, clinics, labs | ![stars](https://img.shields.io/github/stars/sepehr071/doctoreto-mcp?style=flat-square&label=%E2%98%85) |
-| [paziresh24-mcp](https://github.com/sepehr071/paziresh24-mcp) | Find doctors on Paziresh24: profiles, prices, reviews, free slots | ![stars](https://img.shields.io/github/stars/sepehr071/paziresh24-mcp?style=flat-square&label=%E2%98%85) |
-| **Your own account** | | |
-| [bale-mcp](https://github.com/sepehr071/bale-mcp) | Bale bots: read, search and answer messages, ask and wait for replies, send files | ![stars](https://img.shields.io/github/stars/sepehr071/bale-mcp?style=flat-square&label=%E2%98%85) |
-| [payping-mcp](https://github.com/sepehr071/payping-mcp) | PayPing merchants: balance, sales, customers; create payment links, coupons, invoices | ![stars](https://img.shields.io/github/stars/sepehr071/payping-mcp?style=flat-square&label=%E2%98%85) |
+<table>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/sepehr071/snapp-mcp"><img src="https://raw.githubusercontent.com/sepehr071/snapp-mcp/main/.github/banner.png" alt="snapp-mcp: an agent finds the cheapest pizza with delivery on Snappfood" width="100%"></a>
+<h3><a href="https://github.com/sepehr071/snapp-mcp">snapp-mcp</a> <img src="https://img.shields.io/github/stars/sepehr071/snapp-mcp?style=flat-square&label=%E2%98%85" alt="stars"></h3>
+Search Snappfood and SnappMarket food and groceries, compare full prices with packaging and delivery, find deals.
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/sepehr071/digikala-mcp"><img src="https://raw.githubusercontent.com/sepehr071/digikala-mcp/main/.github/banner.png" alt="digikala-mcp: an agent compares every seller of a phone on Digikala with its 30-day price low" width="100%"></a>
+<h3><a href="https://github.com/sepehr071/digikala-mcp">digikala-mcp</a> <img src="https://img.shields.io/github/stars/sepehr071/digikala-mcp?style=flat-square&label=%E2%98%85" alt="stars"></h3>
+Search Digikala with feature filters, best picks for a budget, every seller's price, price history and reviews.
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="33%" valign="top"><b><a href="https://github.com/sepehr071/mrbilit-mcp">mrbilit-mcp</a></b><br><sub>Travel · cheapest flights, trains, buses and hotels, with seats and refund rules</sub></td>
+<td width="33%" valign="top"><b><a href="https://github.com/sepehr071/jabama-mcp">jabama-mcp</a></b><br><sub>Travel · villas and stays at exact prices, tours, events and theater tickets</sub></td>
+<td width="33%" valign="top"><b><a href="https://github.com/sepehr071/otaghak-mcp">otaghak-mcp</a></b><br><sub>Travel · villas and cottages, availability, exact prices, reviews</sub></td>
+</tr>
+<tr>
+<td valign="top"><b><a href="https://github.com/sepehr071/technolife-mcp">technolife-mcp</a></b><br><sub>Shopping · electronics, sellers and installment prices</sub></td>
+<td valign="top"><b><a href="https://github.com/sepehr071/masterkala-mcp">masterkala-mcp</a></b><br><sub>Shopping · gadgets and accessories, prices and specs</sub></td>
+<td valign="top"><b><a href="https://github.com/sepehr071/shopino-mcp">shopino-mcp</a></b><br><sub>Fashion · thousands of shops, sizes, stock, shop ratings</sub></td>
+</tr>
+<tr>
+<td valign="top"><b><a href="https://github.com/sepehr071/khanoumi-mcp">khanoumi-mcp</a></b><br><sub>Beauty · cosmetics and perfume, shades, reviews</sub></td>
+<td valign="top"><b><a href="https://github.com/sepehr071/asalbanoo-mcp">asalbanoo-mcp</a></b><br><sub>Beauty · skin and hair care, variants, deals</sub></td>
+<td valign="top"><b><a href="https://github.com/sepehr071/doctoreto-mcp">doctoreto-mcp</a></b><br><sub>Health · doctors, visit fees, free slots, clinics, labs</sub></td>
+</tr>
+<tr>
+<td valign="top"><b><a href="https://github.com/sepehr071/paziresh24-mcp">paziresh24-mcp</a></b><br><sub>Health · doctor profiles, prices, reviews, free slots</sub></td>
+<td valign="top"><b><a href="https://github.com/sepehr071/bale-mcp">bale-mcp</a></b><br><sub>Messaging · your Bale bot reads, answers and sends files</sub></td>
+<td valign="top"><b><a href="https://github.com/sepehr071/payping-mcp">payping-mcp</a></b><br><sub>Payments · your PayPing sales, customers, payment links, invoices</sub></td>
+</tr>
+</table>
 
 <sub>Store, travel and health servers are unofficial and read-only. Bale and PayPing run locally with your own token.</sub>
 
