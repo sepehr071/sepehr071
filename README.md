@@ -48,6 +48,7 @@
 | Realtime voice agents (LiveKit, speech-to-speech) | [livekit-fa-agent](https://github.com/sepehr071/livekit-fa-agent) · [voice-chess-coach](https://github.com/sepehr071/voice-chess-coach) · [product-assistant](https://github.com/sepehr071/product-assistant) |
 | Telephony voice AI (Asterisk, Android dialer) | [phone-agent](https://github.com/sepehr071/phone-agent) |
 | Tool-calling / MCP agents (approval gates in pm-assistant, pr-agent, dongeto) | [pm-assistant](https://github.com/sepehr071/pm-assistant) · [agent-studio](https://github.com/sepehr071/agent-studio) · [pr-agent](https://github.com/sepehr071/pr-agent) · [dongeto](https://github.com/sepehr071/dongeto) |
+| MCP servers (14 on PyPI, Iranian services) | [snapp-mcp](https://github.com/sepehr071/snapp-mcp) · [digikala-mcp](https://github.com/sepehr071/digikala-mcp) · [mrbilit-mcp](https://github.com/sepehr071/mrbilit-mcp) · [bale-mcp](https://github.com/sepehr071/bale-mcp) · [payping-mcp](https://github.com/sepehr071/payping-mcp) · [and 9 more](#mcp-servers-for-iranian-services) |
 | Coding agents | [sepicode](https://github.com/sepehr071/sepicode) · [pr-agent](https://github.com/sepehr071/pr-agent) |
 | LLM evals (LLM-as-judge, test generation, human scoring) | [voice-agent-testgen](https://github.com/sepehr071/voice-agent-testgen) · [rag-evaluator](https://github.com/sepehr071/rag-evaluator) · [polymind](https://github.com/sepehr071/polymind) |
 | Structured output and document AI (OCR, diarization, vision) | [invoice-extractor](https://github.com/sepehr071/invoice-extractor) · [meeting-assistant](https://github.com/sepehr071/meeting-assistant) · [feedo](https://github.com/sepehr071/feedo) · [ai-explain](https://github.com/sepehr071/ai-explain) · [steel-market-analyst](https://github.com/sepehr071/steel-market-analyst) |
@@ -116,6 +117,35 @@ Drop in a Persian meeting recording; get back who said what, the decisions, the 
 </td>
 </tr>
 </table>
+
+---
+
+## MCP servers for Iranian services
+
+Plug Iran's everyday apps into Claude, Cursor, VS Code or any MCP client. Each one is a small Python stdio server on PyPI: `uvx <name>` and go.
+
+| Server | What your agent can do | |
+|---|---|---|
+| **Shopping** | | |
+| [snapp-mcp](https://github.com/sepehr071/snapp-mcp) | Search Snappfood and SnappMarket food and groceries, compare prices, find deals | ![stars](https://img.shields.io/github/stars/sepehr071/snapp-mcp?style=flat-square&label=%E2%98%85) |
+| [digikala-mcp](https://github.com/sepehr071/digikala-mcp) | Search Digikala with feature filters, best picks for a budget, sellers, price history, reviews | ![stars](https://img.shields.io/github/stars/sepehr071/digikala-mcp?style=flat-square&label=%E2%98%85) |
+| [technolife-mcp](https://github.com/sepehr071/technolife-mcp) | Electronics on Technolife: compare sellers and installment prices | ![stars](https://img.shields.io/github/stars/sepehr071/technolife-mcp?style=flat-square&label=%E2%98%85) |
+| [masterkala-mcp](https://github.com/sepehr071/masterkala-mcp) | Gadgets and accessories on MasterKala: prices, specs, deals | ![stars](https://img.shields.io/github/stars/sepehr071/masterkala-mcp?style=flat-square&label=%E2%98%85) |
+| [shopino-mcp](https://github.com/sepehr071/shopino-mcp) | Fashion from thousands of Iranian shops: prices, sizes, stock, shop ratings | ![stars](https://img.shields.io/github/stars/sepehr071/shopino-mcp?style=flat-square&label=%E2%98%85) |
+| [khanoumi-mcp](https://github.com/sepehr071/khanoumi-mcp) | Cosmetics, skin care and perfume on Khanoumi: prices, shades, reviews | ![stars](https://img.shields.io/github/stars/sepehr071/khanoumi-mcp?style=flat-square&label=%E2%98%85) |
+| [asalbanoo-mcp](https://github.com/sepehr071/asalbanoo-mcp) | Cosmetics, skin and hair care on Asal Banoo: prices, variants, deals | ![stars](https://img.shields.io/github/stars/sepehr071/asalbanoo-mcp?style=flat-square&label=%E2%98%85) |
+| **Travel** | | |
+| [mrbilit-mcp](https://github.com/sepehr071/mrbilit-mcp) | Cheapest flights, trains, buses and hotels in Iran, with seats and refund rules | ![stars](https://img.shields.io/github/stars/sepehr071/mrbilit-mcp?style=flat-square&label=%E2%98%85) |
+| [jabama-mcp](https://github.com/sepehr071/jabama-mcp) | Villas and stays with exact prices, group tours, events and theater tickets | ![stars](https://img.shields.io/github/stars/sepehr071/jabama-mcp?style=flat-square&label=%E2%98%85) |
+| [otaghak-mcp](https://github.com/sepehr071/otaghak-mcp) | Villas and cottages on Otaghak: availability, exact prices, reviews | ![stars](https://img.shields.io/github/stars/sepehr071/otaghak-mcp?style=flat-square&label=%E2%98%85) |
+| **Health** | | |
+| [doctoreto-mcp](https://github.com/sepehr071/doctoreto-mcp) | Find doctors on Doctoreto: visit fees, free slots, reviews, clinics, labs | ![stars](https://img.shields.io/github/stars/sepehr071/doctoreto-mcp?style=flat-square&label=%E2%98%85) |
+| [paziresh24-mcp](https://github.com/sepehr071/paziresh24-mcp) | Find doctors on Paziresh24: profiles, prices, reviews, free slots | ![stars](https://img.shields.io/github/stars/sepehr071/paziresh24-mcp?style=flat-square&label=%E2%98%85) |
+| **Your own account** | | |
+| [bale-mcp](https://github.com/sepehr071/bale-mcp) | Bale bots: read, search and answer messages, ask and wait for replies, send files | ![stars](https://img.shields.io/github/stars/sepehr071/bale-mcp?style=flat-square&label=%E2%98%85) |
+| [payping-mcp](https://github.com/sepehr071/payping-mcp) | PayPing merchants: balance, sales, customers; create payment links, coupons, invoices | ![stars](https://img.shields.io/github/stars/sepehr071/payping-mcp?style=flat-square&label=%E2%98%85) |
+
+<sub>Store, travel and health servers are unofficial and read-only. Bale and PayPing run locally with your own token.</sub>
 
 ---
 
