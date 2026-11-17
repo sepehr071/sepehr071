@@ -48,7 +48,7 @@
 | Realtime voice agents (LiveKit, speech-to-speech) | [livekit-fa-agent](https://github.com/sepehr071/livekit-fa-agent) · [voice-chess-coach](https://github.com/sepehr071/voice-chess-coach) · [product-assistant](https://github.com/sepehr071/product-assistant) |
 | Telephony voice AI (Asterisk, Android dialer) | [phone-agent](https://github.com/sepehr071/phone-agent) |
 | Tool-calling / MCP agents (approval gates in pm-assistant, pr-agent, dongeto) | [pm-assistant](https://github.com/sepehr071/pm-assistant) · [agent-studio](https://github.com/sepehr071/agent-studio) · [pr-agent](https://github.com/sepehr071/pr-agent) · [dongeto](https://github.com/sepehr071/dongeto) |
-| MCP servers (14 on PyPI, Iranian services) | [snapp-mcp](https://github.com/sepehr071/snapp-mcp) · [digikala-mcp](https://github.com/sepehr071/digikala-mcp) · [mrbilit-mcp](https://github.com/sepehr071/mrbilit-mcp) · [bale-mcp](https://github.com/sepehr071/bale-mcp) · [payping-mcp](https://github.com/sepehr071/payping-mcp) · [and 9 more](#mcp-servers-for-iranian-services) |
+| MCP servers and an MCP marketplace (77 servers, 994 tools; PyPI + MCP Registry) | [iran-mcp](https://github.com/sepehr071/iran-mcp) · [mcpfarsi.ir](https://mcpfarsi.ir) · [snapp-mcp](https://github.com/sepehr071/snapp-mcp) · [digikala-mcp](https://github.com/sepehr071/digikala-mcp) · [3x-ui MCP (PR)](https://github.com/MHSanaei/3x-ui/pull/6956) · [and more](#mcp-for-the-iranian-web) |
 | Coding agents | [sepicode](https://github.com/sepehr071/sepicode) · [pr-agent](https://github.com/sepehr071/pr-agent) |
 | LLM evals (LLM-as-judge, test generation, human scoring) | [voice-agent-testgen](https://github.com/sepehr071/voice-agent-testgen) · [rag-evaluator](https://github.com/sepehr071/rag-evaluator) · [polymind](https://github.com/sepehr071/polymind) |
 | Structured output and document AI (OCR, diarization, vision) | [invoice-extractor](https://github.com/sepehr071/invoice-extractor) · [meeting-assistant](https://github.com/sepehr071/meeting-assistant) · [feedo](https://github.com/sepehr071/feedo) · [ai-explain](https://github.com/sepehr071/ai-explain) · [steel-market-analyst](https://github.com/sepehr071/steel-market-analyst) |
@@ -120,9 +120,23 @@ Drop in a Persian meeting recording; get back who said what, the decisions, the 
 
 ---
 
-## MCP servers for Iranian services
+## MCP for the Iranian web
 
-Plug Iran's everyday apps into Claude, Cursor, VS Code or any MCP client. Each one is a small Python stdio server on PyPI: `uvx <name>` and go.
+Plug Iran's everyday apps into Claude, Cursor, VS Code or any MCP client.
+
+**[iran-mcp](https://github.com/sepehr071/iran-mcp)** <img src="https://img.shields.io/github/stars/sepehr071/iran-mcp?style=flat-square&label=%E2%98%85" alt="stars"><br>
+77 MCP servers with 994 tools that give AI agents the Iranian web: shops, travel, health, jobs, finance, law and news. Install as Claude Code plugins or Agent Skills; listed in the MCP Registry.
+
+**[MCP Farsi · mcpfarsi.ir](https://mcpfarsi.ir)**<br>
+A Persian marketplace for MCP servers and Agent Skills, with install pages for 7 AI apps and a hosted MCP router: add one URL, then pick the servers behind it from a dashboard. OAuth for claude.ai and ChatGPT, upstream keys encrypted at rest. <sub><b>Node · Express · Postgres · Docker</b></sub>
+
+**[Chi family · hamechiai.ir](https://hamechiai.ir)**<br>
+Persian "what should I…?" assistants for food, shopping, stays and books. Claude searches Iranian stores through these MCP servers and code computes every price. Hamechi chats over 67 servers (~830 tools) with tables, charts and cards; also on Android.
+
+**[3x-ui MCP server](https://github.com/MHSanaei/3x-ui/pull/6956)**<br>
+A built-in MCP endpoint for the 3x-ui panel so an agent can manage clients, inbounds and settings (Go, with tests). Open PR upstream.
+
+Each server is a small Python stdio server on PyPI: `uvx <name>` and go. A few of them:
 
 <table>
 <tr>
